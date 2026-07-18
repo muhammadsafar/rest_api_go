@@ -34,3 +34,5 @@ go.work.sum
 # folder exception
 cmd/api/binaries/
 cmd/api/build/
+
+cmd/api/key.pem
