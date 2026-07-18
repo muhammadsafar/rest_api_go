@@ -1,0 +1,379 @@
+{
+"teachers": [
+	{
+		"id" : 100,
+		"first_name" : "Nurul",
+		"last_name" : "Hudah Mire",
+		"email" : "nurulhudah@gmail.com",
+		"class" : "411B",
+		"subject" : "Biology"
+	},
+	{
+		"id" : 101,
+		"first_name" : "Nusaiba",
+		"last_name" : "Amatullah",
+		"email" : "nusa@iba.com",
+		"class" : "405",
+		"subject" : "Quran Hadits"
+	},
+	{
+		"id" : 103,
+		"first_name" : "Andi",
+		"last_name" : "Baso Mustakim",
+		"email" : "andi.pratama@example.com",
+		"class" : "406",
+		"subject" : "Mathematics"
+	},
+	{
+		"id" : 104,
+		"first_name" : "Budi",
+		"last_name" : "Santoso",
+		"email" : "budi.santoso@example.com",
+		"class" : "10B",
+		"subject" : "Physics"
+	},
+	{
+		"id" : 105,
+		"first_name" : "Citra",
+		"last_name" : "Lestari",
+		"email" : "citra.lestari@example.com",
+		"class" : "10C",
+		"subject" : "Chemistry"
+	},
+	{
+		"id" : 106,
+		"first_name" : "Dewi",
+		"last_name" : "Anggraini",
+		"email" : "dewi.anggraini@example.com",
+		"class" : "11A",
+		"subject" : "Biology"
+	},
+	{
+		"id" : 107,
+		"first_name" : "Eko",
+		"last_name" : "Saputra",
+		"email" : "eko.saputra@example.com",
+		"class" : "11B",
+		"subject" : "History"
+	},
+	{
+		"id" : 108,
+		"first_name" : "Farah",
+		"last_name" : "Nabila",
+		"email" : "farah.nabila@example.com",
+		"class" : "11C",
+		"subject" : "Geography"
+	},
+	{
+		"id" : 109,
+		"first_name" : "Gilang",
+		"last_name" : "Ramadhan",
+		"email" : "gilang.ramadhan@example.com",
+		"class" : "12A",
+		"subject" : "Economics"
+	},
+	{
+		"id" : 110,
+		"first_name" : "Hani",
+		"last_name" : "Wijaya",
+		"email" : "hani.wijaya@example.com",
+		"class" : "12B",
+		"subject" : "Accounting"
+	},
+	{
+		"id" : 111,
+		"first_name" : "Indra",
+		"last_name" : "Kusuma",
+		"email" : "indra.kusuma@example.com",
+		"class" : "12C",
+		"subject" : "English"
+	},
+	{
+		"id" : 112,
+		"first_name" : "Joko",
+		"last_name" : "Setiawan",
+		"email" : "joko.setiawan@example.com",
+		"class" : "10A",
+		"subject" : "Indonesian"
+	},
+	{
+		"id" : 113,
+		"first_name" : "Kartika",
+		"last_name" : "Putri",
+		"email" : "kartika.putri@example.com",
+		"class" : "10B",
+		"subject" : "Civics"
+	},
+	{
+		"id" : 114,
+		"first_name" : "Lukman",
+		"last_name" : "Hakim",
+		"email" : "lukman.hakim@example.com",
+		"class" : "10C",
+		"subject" : "Art"
+	},
+	{
+		"id" : 115,
+		"first_name" : "Maya",
+		"last_name" : "Sari",
+		"email" : "maya.sari@example.com",
+		"class" : "11A",
+		"subject" : "Music"
+	},
+	{
+		"id" : 116,
+		"first_name" : "Nanda",
+		"last_name" : "Permana",
+		"email" : "nanda.permana@example.com",
+		"class" : "11B",
+		"subject" : "Physical Education"
+	},
+	{
+		"id" : 117,
+		"first_name" : "Olivia",
+		"last_name" : "Tan",
+		"email" : "olivia.tan@example.com",
+		"class" : "11C",
+		"subject" : "Computer Science"
+	},
+	{
+		"id" : 118,
+		"first_name" : "Putra",
+		"last_name" : "Mahendra",
+		"email" : "putra.mahendra@example.com",
+		"class" : "12A",
+		"subject" : "Mathematics"
+	},
+	{
+		"id" : 119,
+		"first_name" : "Qori",
+		"last_name" : "Aisyah",
+		"email" : "qori.aisyah@example.com",
+		"class" : "12B",
+		"subject" : "Physics"
+	},
+	{
+		"id" : 120,
+		"first_name" : "Rina",
+		"last_name" : "Melati",
+		"email" : "rina.melati@example.com",
+		"class" : "12C",
+		"subject" : "Chemistry"
+	},
+	{
+		"id" : 121,
+		"first_name" : "Satria",
+		"last_name" : "Nugraha",
+		"email" : "satria.nugraha@example.com",
+		"class" : "10A",
+		"subject" : "Biology"
+	},
+	{
+		"id" : 122,
+		"first_name" : "Tari",
+		"last_name" : "Puspita",
+		"email" : "tari.puspita@example.com",
+		"class" : "10B",
+		"subject" : "History"
+	},
+	{
+		"id" : 123,
+		"first_name" : "Umar",
+		"last_name" : "Fauzi",
+		"email" : "umar.fauzi@example.com",
+		"class" : "10C",
+		"subject" : "Geography"
+	},
+	{
+		"id" : 124,
+		"first_name" : "Vina",
+		"last_name" : "Kirana",
+		"email" : "vina.kirana@example.com",
+		"class" : "11A",
+		"subject" : "Economics"
+	},
+	{
+		"id" : 125,
+		"first_name" : "Wahyu",
+		"last_name" : "Hidayat",
+		"email" : "wahyu.hidayat@example.com",
+		"class" : "11B",
+		"subject" : "Accounting"
+	},
+	{
+		"id" : 126,
+		"first_name" : "Xavier",
+		"last_name" : "Jonathan",
+		"email" : "xavier.jonathan@example.com",
+		"class" : "11C",
+		"subject" : "English"
+	},
+	{
+		"id" : 127,
+		"first_name" : "Yuni",
+		"last_name" : "Safitri",
+		"email" : "yuni.safitri@example.com",
+		"class" : "12A",
+		"subject" : "Indonesian"
+	},
+	{
+		"id" : 128,
+		"first_name" : "Zaki",
+		"last_name" : "Firdaus",
+		"email" : "zaki.firdaus@example.com",
+		"class" : "12B",
+		"subject" : "Civics"
+	},
+	{
+		"id" : 129,
+		"first_name" : "Anita",
+		"last_name" : "Rahma",
+		"email" : "anita.rahma@example.com",
+		"class" : "12C",
+		"subject" : "Art"
+	},
+	{
+		"id" : 130,
+		"first_name" : "Bagas",
+		"last_name" : "Aditya",
+		"email" : "bagas.aditya@example.com",
+		"class" : "10A",
+		"subject" : "Music"
+	},
+	{
+		"id" : 131,
+		"first_name" : "Clara",
+		"last_name" : "Oktavia",
+		"email" : "clara.oktavia@example.com",
+		"class" : "10B",
+		"subject" : "Physical Education"
+	},
+	{
+		"id" : 132,
+		"first_name" : "Dimas",
+		"last_name" : "Kurniawan",
+		"email" : "dimas.kurniawan@example.com",
+		"class" : "10C",
+		"subject" : "Computer Science"
+	},
+	{
+		"id" : 133,
+		"first_name" : "Elsa",
+		"last_name" : "Fitriani",
+		"email" : "elsa.fitriani@example.com",
+		"class" : "11A",
+		"subject" : "Mathematics"
+	},
+	{
+		"id" : 134,
+		"first_name" : "Fajar",
+		"last_name" : "Gunawan",
+		"email" : "fajar.gunawan@example.com",
+		"class" : "11B",
+		"subject" : "Physics"
+	},
+	{
+		"id" : 135,
+		"first_name" : "Gita",
+		"last_name" : "Purnama",
+		"email" : "gita.purnama@example.com",
+		"class" : "11C",
+		"subject" : "Chemistry"
+	},
+	{
+		"id" : 136,
+		"first_name" : "Hendra",
+		"last_name" : "Susanto",
+		"email" : "hendra.susanto@example.com",
+		"class" : "12A",
+		"subject" : "Biology"
+	},
+	{
+		"id" : 137,
+		"first_name" : "Intan",
+		"last_name" : "Maharani",
+		"email" : "intan.maharani@example.com",
+		"class" : "12B",
+		"subject" : "History"
+	},
+	{
+		"id" : 138,
+		"first_name" : "Jihan",
+		"last_name" : "Amelia",
+		"email" : "jihan.amelia@example.com",
+		"class" : "12C",
+		"subject" : "Geography"
+	},
+	{
+		"id" : 139,
+		"first_name" : "Kevin",
+		"last_name" : "Saputro",
+		"email" : "kevin.saputro@example.com",
+		"class" : "10A",
+		"subject" : "Economics"
+	},
+	{
+		"id" : 140,
+		"first_name" : "Lina",
+		"last_name" : "Damayanti",
+		"email" : "lina.damayanti@example.com",
+		"class" : "10B",
+		"subject" : "Accounting"
+	},
+	{
+		"id" : 141,
+		"first_name" : "Miko",
+		"last_name" : "Yusuf",
+		"email" : "miko.yusuf@example.com",
+		"class" : "10C",
+		"subject" : "English"
+	},
+	{
+		"id" : 142,
+		"first_name" : "Nina",
+		"last_name" : "Aulia",
+		"email" : "nina.aulia@example.com",
+		"class" : "11A",
+		"subject" : "Indonesian"
+	},
+	{
+		"id" : 143,
+		"first_name" : "Oscar",
+		"last_name" : "Prakoso",
+		"email" : "oscar.prakoso@example.com",
+		"class" : "11B",
+		"subject" : "Civics"
+	},
+	{
+		"id" : 153,
+		"first_name" : "Wulan",
+		"last_name" : "Rosita",
+		"email" : "wulan.rosita@example.com",
+		"class" : "10C",
+		"subject" : "Chemistry"
+	},
+	{
+		"id" : 154,
+		"first_name" : "Yoga",
+		"last_name" : "Firmansyah",
+		"email" : "yoga.firmansyah@example.com",
+		"class" : "11A",
+		"subject" : "Biology"
+	},
+	{
+		"id" : 156,
+		"first_name" : "Baharuddin",
+		"last_name" : "Dg Malimpo",
+		"email" : "bahar.dg@example.com",
+		"class" : "11A",
+		"subject" : "Biogas"
+	},
+	{
+		"id" : 157,
+		"first_name" : "Ramlah",
+		"last_name" : "Jumain",
+		"email" : "ramlah.jumain@example.com",
+		"class" : "11B",
+		"subject" : "Math"
+	}
+]}

@@ -1,188 +1,168 @@
 package main
 
 import (
+	"crypto/tls"
+	"embed"
 	"fmt"
 	"log"
 	"net/http"
-	"strings"
+	"os"
+	"restapi/internal/api/middlewares"
+	"restapi/internal/api/router"
+	"time"
+
+	"github.com/joho/godotenv"
 )
 
-type user struct {
-	Name string `json:"name"`
-	Age  int    `json:"age"`
-	City string `json:"city"`
-}
+//go:embed .env
+var envFile embed.FS
 
-func rootHandler(w http.ResponseWriter, r *http.Request) {
-	// fmt.Fprintf(w,"Hello root route")
-	w.Write([]byte("Hello Root Route"))
-	fmt.Println("Hello Root Route")
-}
-
-func teacherHandler(w http.ResponseWriter, r *http.Request) {
-
-	//path teachers/123
-	//query teachers?key1=value1&key2=value2&key3=value3
-
-	switch r.Method {
-	case http.MethodGet:
-
-		fmt.Println(r.URL.Path)
-		path := strings.TrimPrefix(r.URL.Path, "/teachers/")
-		userID := strings.TrimSuffix(path, "/")
-		fmt.Println("User ID:", userID)
-
-		fmt.Println("Query params : ", r.URL.Query())
-
-		queryParams := r.URL.Query()
-		sortby := queryParams.Get("sortby")
-		key := queryParams.Get("key")
-		sortorder := queryParams.Get("sortorder")
-
-		if sortorder == "" {
-			sortorder = "DESC"
-		}
-
-		fmt.Printf("Sort By: %v, Key: %v, Sort Order: %v\n", sortby, key, sortorder)
-
-		// Handle GET request
-		w.Write([]byte("Hello GET request for /teachers"))
-		fmt.Println("Hello GET request for /teachers")
-		return
-
-	case http.MethodPost:
-
-		// Handle POST request
-		w.Write([]byte("Hello POST request for /teachers"))
-		fmt.Println("Hello POST request for /teachers")
-		return
-
-	case http.MethodPut:
-		// Handle PUT request
-		w.Write([]byte("Hello PUT request for /teachers"))
-		fmt.Println("Hello PUT request for /teachers")
-		return
-
-	case http.MethodPatch:
-		w.Write([]byte("Hello PATCH request for /teachers"))
-		fmt.Println("Hello PATCH request for /teachers")
-		return
-
-	case http.MethodDelete:
-		// Handle DELETE request
-		w.Write([]byte("Hello DELETE request for /teachers"))
-		fmt.Println("Hello DELETE request for /teachers")
-		return
-
-	default:
-		// Handle other HTTP methods
-		w.WriteHeader(http.StatusMethodNotAllowed)
-		w.Write([]byte("Method not allowed"))
-		fmt.Println("Method not allowed")
-		return
+func loadEnvFromEmbeddedFile() {
+	//Read the embedded .env file
+	content, err := envFile.ReadFile(".env")
+	if err != nil {
+		log.Fatalf("Error reading .env file:%v", err)
 	}
 
-}
+	//create a temp file to load the env vars
 
-func studentHandler(w http.ResponseWriter, r *http.Request) {
-	switch r.Method {
-	case http.MethodGet:
-
-		// Handle GET request
-		w.Write([]byte("Hello GET request for /students"))
-		fmt.Println("Hello GET request for /students")
-		return
-
-	case http.MethodPost:
-
-		// Handle POST request
-		w.Write([]byte("Hello POST request for /students"))
-		fmt.Println("Hello POST request for /students")
-		return
-
-	case http.MethodPut:
-		// Handle PUT request
-		w.Write([]byte("Hello PUT request for /students"))
-		fmt.Println("Hello PUT request for /students")
-		return
-
-	case http.MethodPatch:
-		w.Write([]byte("Hello PATCH request for /students"))
-		fmt.Println("Hello PATCH request for /students")
-		return
-
-	case http.MethodDelete:
-		// Handle DELETE request
-		w.Write([]byte("Hello DELETE request for /students"))
-		fmt.Println("Hello DELETE request for /students")
-		return
-
-	default:
-		// Handle other HTTP methods
-		w.WriteHeader(http.StatusMethodNotAllowed)
-		w.Write([]byte("Method not allowed"))
-		fmt.Println("Method not allowed")
-		return
+	tempfile, err := os.CreateTemp("", ".env")
+	if err != nil {
+		log.Fatalf("Error creating temp .env file:%v", err)
 	}
-}
 
-func execHandler(w http.ResponseWriter, r *http.Request) {
-	switch r.Method {
-	case http.MethodGet:
+	defer os.Remove(tempfile.Name())
 
-		// Handle GET request
-		w.Write([]byte("Hello GET request for /execs"))
-		fmt.Println("Hello GET request for /execs")
-		return
-
-	case http.MethodPost:
-
-		// Handle POST request
-		w.Write([]byte("Hello POST request for /execs"))
-		fmt.Println("Hello POST request for /execs")
-		return
-
-	case http.MethodPut:
-		// Handle PUT request
-		w.Write([]byte("Hello PUT request for /execs"))
-		fmt.Println("Hello PUT request for /execs")
-		return
-
-	case http.MethodPatch:
-		w.Write([]byte("Hello PATCH request for /execs"))
-		fmt.Println("Hello PATCH request for /execs")
-		return
-
-	case http.MethodDelete:
-		// Handle DELETE request
-		w.Write([]byte("Hello DELETE request for /execs"))
-		fmt.Println("Hello DELETE request for /execs")
-		return
-
-	default:
-		// Handle other HTTP methods
-		w.WriteHeader(http.StatusMethodNotAllowed)
-		w.Write([]byte("Method not allowed"))
-		fmt.Println("Method not allowed")
-		return
+	//Write content of the embedded .en vfile to the time file
+	_, err = tempfile.Write(content)
+	if err != nil {
+		log.Fatalf("Error writing to temp .env file:%v", err)
 	}
+
+	err = tempfile.Close()
+	if err != nil {
+		log.Fatalf("Error close temp .env file:%v", err)
+	}
+
+	//Load enc vars from the temp file
+	err = godotenv.Load(tempfile.Name())
+	if err != nil {
+		log.Fatalf("Error loading temp .env file:%v", err)
+	}
+
 }
 
 func main() {
 
-	port := ":3000"
+	//Only in production, for running source code
+	// err := godotenv.Load()
+	// if err != nil {
+	// 	return
+	// }
 
-	http.HandleFunc("/", rootHandler)
+	// _, err = sqlconnect.ConnectDB()
+	// if err != nil {
+	// 	utils.ErrorHandler(err, "Error connecting to database")
+	// 	return
+	// }
 
-	http.HandleFunc("/teachers/", teacherHandler)
+	//load env vars from the embedded .env file
+	loadEnvFromEmbeddedFile()
 
-	http.HandleFunc("/students/", studentHandler)
+	// fmt.Println("Environment variable CERT_FILE:", os.Getenv("CERT_FILE"))
 
-	http.HandleFunc("/execs/", execHandler)
+	port := os.Getenv("SERVER_PORT")
+
+	// cert := "cert.pem"
+	// key := "key.pem"
+
+	cert := os.Getenv("CERT_FILE")
+	key := os.Getenv("KEY_FILE")
 
 	fmt.Println("Starting server on port : ", port)
-	err := http.ListenAndServe(port, nil)
+	//using default server
+	// err := http.ListenAndServe(port, nil)
+
+	//USING TLS
+	tlsConfig := &tls.Config{
+		MinVersion: tls.VersionTLS12,
+		// MinVersion: tls.VersionTLS10,
+	}
+
+	rl := middlewares.NewRateLimiter(5, time.Minute)
+
+	hppOptions := middlewares.HPPOptions{
+		CheckQuery:               true,
+		CheckBody:                true,
+		CheckBodyFormContentType: "application/x-www-form-urlencoded",
+		Whitelist:                []string{"sortBy", "sortOrder", "name", "age", "class", "country"},
+	}
+
+	router := router.MainRouter()
+
+	jwtMiddleware := middlewares.MiddlewareExcludePaths(middlewares.JWTMiddleware,
+		"/execs/login",
+		"/execs/forgotpassword",
+		"/execs/resetpassword/reset",
+		// "/execs"
+	)
+
+	secureMux := applyMiddlewares(
+		router,
+		middlewares.SecurityHeaders,
+		middlewares.Compression,
+		middlewares.Hpp(hppOptions),
+		middlewares.XSSMiddleware,
+		jwtMiddleware,
+		middlewares.ResponseTimeMiddleware,
+		rl.RateLimiterMiddleware,
+		middlewares.Cors)
+
+	// secureMux := middlewares.SecurityHeaders(router)
+	// secureMux := middlewares.JWTMiddleware(middlewares.SecurityHeaders(router))
+
+	// secureMux := jwtMiddleware(middlewares.SecurityHeaders(router))
+	// secureMux := middlewares.XSSMiddleware(router)
+
+	// secureMux := middlewares.Cors(
+	// 	middlewares.XSSMiddleware(
+	// 		jwtMiddleware(
+	// 			rl.RateLimiterMiddleware(
+	// 				middlewares.ResponseTimeMiddleware(
+	// 					middlewares.SecurityHeaders(
+	// 						middlewares.Compression(
+	// 							middlewares.Hpp(hppOptions)(router))))))))
+
+	//Create a custom server with TLS configuration
+	server := &http.Server{
+		Addr: port,
+		// Handler: mux, //if without mux, set nil
+		Handler: secureMux,
+		// Handler: router,
+		// Handler: logProtocol(router),
+		TLSConfig: tlsConfig,
+	}
+
+	err := server.ListenAndServeTLS(cert, key)
+	// err := server.ListenAndServe()
+
 	if err != nil {
 		log.Fatal("Error starting the server:", err)
 	}
+}
+
+type Middleware func(http.Handler) http.Handler
+
+func applyMiddlewares(handler http.Handler, middlewares ...Middleware) http.Handler {
+	for _, middleware := range middlewares {
+		handler = middleware(handler)
+	}
+	return handler
+}
+
+func logProtocol(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		log.Println("Protocol:", r.Proto)
+		next.ServeHTTP(w, r)
+	})
 }

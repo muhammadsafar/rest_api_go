@@ -1,0 +1,162 @@
+[
+  {
+    "first_name": "Nurul",
+    "last_name": "Hudah Mire",
+    "email": "nurul.hudah@example.com",
+    "username": "nurul01",
+    "password": "pass123",
+    "role": "admin"
+  },
+  {
+    "first_name": "Farah",
+    "last_name": "Nabila",
+    "email": "farah.nabila@example.com",
+    "username": "farah01",
+    "password": "pass123",
+    "role": "user"
+  },
+  {
+    "first_name": "Citra",
+    "last_name": "Lestari",
+    "email": "citra.lestari@example.com",
+    "username": "citra01",
+    "password": "pass123",
+    "role": "dev"
+  },
+  {
+    "first_name": "Dewi",
+    "last_name": "Anggraini",
+    "email": "dewi.anggraini@example.com",
+    "username": "dewi01",
+    "password": "pass123",
+    "role": "user"
+  },
+  {
+    "first_name": "Eko",
+    "last_name": "Saputra",
+    "email": "eko.saputra@example.com",
+    "username": "eko01",
+    "password": "pass123",
+    "role": "user"
+  },
+  {
+    "first_name": "Fajar",
+    "last_name": "Nugroho",
+    "email": "fajar.nugroho@example.com",
+    "username": "fajar01",
+    "password": "pass123",
+    "role": "dev"
+  },
+  {
+    "first_name": "Gina",
+    "last_name": "Permata",
+    "email": "gina.permata@example.com",
+    "username": "gina01",
+    "password": "pass123",
+    "role": "user"
+  },
+  {
+    "first_name": "Hendra",
+    "last_name": "Wijaya",
+    "email": "hendra.wijaya@example.com",
+    "username": "hendra01",
+    "password": "pass123",
+    "role": "admin"
+  },
+  {
+    "first_name": "Indah",
+    "last_name": "Sari",
+    "email": "indah.sari@example.com",
+    "username": "indah01",
+    "password": "pass123",
+    "role": "user"
+  },
+  {
+    "first_name": "Joko",
+    "last_name": "Firmansyah",
+    "email": "joko.firmansyah@example.com",
+    "username": "joko01",
+    "password": "pass123",
+    "role": "dev"
+  },
+  {
+    "first_name": "Kevin",
+    "last_name": "Gunawan",
+    "email": "kevin.gunawan@example.com",
+    "username": "kevin01",
+    "password": "pass123",
+    "role": "user"
+  },
+  {
+    "first_name": "Lina",
+    "last_name": "Kusuma",
+    "email": "lina.kusuma@example.com",
+    "username": "lina01",
+    "password": "pass123",
+    "role": "user"
+  },
+  {
+    "first_name": "Maya",
+    "last_name": "Rahmawati",
+    "email": "maya.rahmawati@example.com",
+    "username": "maya01",
+    "password": "pass123",
+    "role": "admin"
+  },
+  {
+    "first_name": "Nanda",
+    "last_name": "Putri",
+    "email": "nanda.putri@example.com",
+    "username": "nanda01",
+    "password": "pass123",
+    "role": "user"
+  },
+  {
+    "first_name": "Oscar",
+    "last_name": "Halim",
+    "email": "oscar.halim@example.com",
+    "username": "oscar01",
+    "password": "pass123",
+    "role": "dev"
+  },
+  {
+    "first_name": "Putri",
+    "last_name": "Ayu",
+    "email": "putri.ayu@example.com",
+    "username": "putri01",
+    "password": "pass123",
+    "role": "user"
+  },
+  {
+    "first_name": "Rian",
+    "last_name": "Kurniawan",
+    "email": "rian.kurniawan@example.com",
+    "username": "rian01",
+    "password": "pass123",
+    "role": "user"
+  },
+  {
+    "first_name": "Sinta",
+    "last_name": "Melati",
+    "email": "sinta.melati@example.com",
+    "username": "sinta01",
+    "password": "pass123",
+    "role": "dev"
+  },
+  {
+    "first_name": "Teguh",
+    "last_name": "Prakoso",
+    "email": "teguh.prakoso@example.com",
+    "username": "teguh01",
+    "password": "pass123",
+    "role": "admin"
+  },
+  {
+    "first_name": "Vina",
+    "last_name": "Maharani",
+    "email": "vina.maharani@example.com",
+    "username": "vina01",
+    "password": "pass123",
+    "role": "user"
+  }
+]

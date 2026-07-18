@@ -82,7 +82,7 @@ func main_bckp() {
 			fmt.Println("Raw Body : ", string(body))
 
 			//if you expect json data, then unmarshal it into a struct
-			var userIntance user //initialize a user instance
+			var userIntance user1 //initialize a user instance
 			err = json.Unmarshal(body, &userIntance)
 			if err != nil {
 				return

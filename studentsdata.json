@@ -1,0 +1,154 @@
+{
+  "students": [
+    {
+      "first_name": "Ahmad",
+      "last_name": "Saputra",
+      "email": "ahmad.saputra001@student.com",
+      "class": "10A"
+    },
+    {
+      "first_name": "Siti",
+      "last_name": "Aisyah",
+      "email": "siti.aisyah002@student.com",
+      "class": "10B"
+    },
+    {
+      "first_name": "Muhammad",
+      "last_name": "Iqbal",
+      "email": "muhammad.iqbal003@student.com",
+      "class": "10C"
+    },
+    {
+      "first_name": "Dinda",
+      "last_name": "Putri",
+      "email": "dinda.putri004@student.com",
+      "class": "11A"
+    },
+    {
+      "first_name": "Rizky",
+      "last_name": "Pratama",
+      "email": "rizky.pratama005@student.com",
+      "class": "11B"
+    },
+    {
+      "first_name": "Nabila",
+      "last_name": "Rahma",
+      "email": "nabila.rahma006@student.com",
+      "class": "11C"
+    },
+    {
+      "first_name": "Fajar",
+      "last_name": "Hidayat",
+      "email": "fajar.hidayat007@student.com",
+      "class": "12A"
+    },
+    {
+      "first_name": "Aulia",
+      "last_name": "Safitri",
+      "email": "aulia.safitri008@student.com",
+      "class": "12B"
+    },
+    {
+      "first_name": "Yoga",
+      "last_name": "Permana",
+      "email": "yoga.permana009@student.com",
+      "class": "12C"
+    },
+    {
+      "first_name": "Ilham",
+      "last_name": "Ramadhan",
+      "email": "ilham.ramadhan010@student.com",
+      "class": "405"
+    },
+    {
+      "first_name": "Nurfadilah",
+      "last_name": "Hasan",
+      "email": "nurfadilah.hasan011@student.com",
+      "class": "406"
+    },
+    {
+      "first_name": "Ridwan",
+      "last_name": "Akbar",
+      "email": "ridwan.akbar012@student.com",
+      "class": "411B"
+    },
+    {
+      "first_name": "Sarah",
+      "last_name": "Amanda",
+      "email": "sarah.amanda013@student.com",
+      "class": "10A"
+    },
+    {
+      "first_name": "Kevin",
+      "last_name": "Wijaya",
+      "email": "kevin.wijaya014@student.com",
+      "class": "10B"
+    },
+    {
+      "first_name": "Putri",
+      "last_name": "Lestari",
+      "email": "putri.lestari015@student.com",
+      "class": "10C"
+    },
+    {
+      "first_name": "Andika",
+      "last_name": "Firmansyah",
+      "email": "andika.firmansyah016@student.com",
+      "class": "11A"
+    },
+    {
+      "first_name": "Cindy",
+      "last_name": "Oktaviani",
+      "email": "cindy.oktaviani017@student.com",
+      "class": "11B"
+    },
+    {
+      "first_name": "Rama",
+      "last_name": "Kurniawan",
+      "email": "rama.kurniawan018@student.com",
+      "class": "11C"
+    },
+    {
+      "first_name": "Dewi",
+      "last_name": "Angelia",
+      "email": "dewi.angelia019@student.com",
+      "class": "12A"
+    },
+    {
+      "first_name": "Bagus",
+      "last_name": "Santoso",
+      "email": "bagus.santoso020@student.com",
+      "class": "12B"
+    },
+    {
+      "first_name": "Mira",
+      "last_name": "Puspita",
+      "email": "mira.puspita021@student.com",
+      "class": "12C"
+    },
+    {
+      "first_name": "Rafi",
+      "last_name": "Hakim",
+      "email": "rafi.hakim022@student.com",
+      "class": "405"
+    },
+    {
+      "first_name": "Anisa",
+      "last_name": "Maharani",
+      "email": "anisa.maharani023@student.com",
+      "class": "406"
+    },
+    {
+      "first_name": "Yusuf",
+      "last_name": "Maulana",
+      "email": "yusuf.maulana024@student.com",
+      "class": "411B"
+    },
+    {
+      "first_name": "Zahra",
+      "last_name": "Nabila",
+      "email": "zahra.nabila025@student.com",
+      "class": "10A"
+    }
+  ]
+}
